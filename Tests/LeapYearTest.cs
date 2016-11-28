@@ -6,7 +6,29 @@ namespace LeapYear
     [Fact]
     public void IsLeapYear_ForNumberDivisibleByFour_true()
     {
-      // eventually your testing code will go here
+      LeapYear testLeapYear = new LeapYear();
+      Assert.Equal(true, testLeapYear.IsLeapYear(2012));
+    }
+
+    [Fact]
+    public void IsLeapYear_ForNumberNotDivisibleByFour_false()
+    {
+      LeapYear testLeapYear = new LeapYear();
+      Assert.Equal(false, testLeapYear.IsLeapYear(1995));
+    }
+
+    [Fact]
+    public void IsLeapYear_ForNumberDivisibleByHundred_false()
+    {
+      LeapYear testLeapYear = new LeapYear();
+      Assert.Equal(false, testLeapYear.IsLeapYear(1900));
+    }
+
+    [Fact]
+    public void IsLeapYear_ForNumberDivisibleByFourHundred_true()
+    {
+      LeapYear testLeapYear = new LeapYear();
+      Assert.Equal(true, testLeapYear.IsLeapYear(2000));
     }
   }
 }

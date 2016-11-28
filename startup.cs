@@ -14,14 +14,14 @@ namespace LeapYear
       app.UseOwin(x => x.UseNancy());
     }
   }
-  public class CustomRootPathProvider : IRootPathProvider
+  public class CustomRootPathProvider: IRootPathProvider
   {
     public string GetRootPath()
     {
       return Directory.GetCurrentDirectory();
     }
   }
-  public class RazorConfig : IRazorConfiguration
+  public class RazorConfig: IRazorConfiguration
   {
     public IEnumerable<string> GetAssemblyNames()
     {
